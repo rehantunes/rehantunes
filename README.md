@@ -1,16 +1,17 @@
 ### Hi there 👋 Cambadaaaaa
+<h4 class=".digitando">Hello World</h4>
 
-<!--
-**rehantunes/rehantunes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on Tech Support
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<script>
+  function ativaLetra(elemento){
+    const arrTexto = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    arrTexto.forEach((letra, i)=>{
+        setTimeout(()=>{
+            elemento.innerHTML += letra;
+        }, 70 * i);
+    });
+}
+const titulo = document.querySelector('.digitando');
+ativaLetra(titulo);
+</script>
